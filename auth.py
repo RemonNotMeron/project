@@ -232,6 +232,7 @@ def load_users():
     global users
     if USERS_FILE.exists():
         try:
+            # Load users from file
             users = json.loads(USERS_FILE.read_text(encoding='utf-8'))
             # Add default decks to users that don't have any
             for username in users:

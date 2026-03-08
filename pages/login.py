@@ -1,8 +1,7 @@
 from nicegui import ui
-#from auth import users, pwd_context, login_success, login_failed
+from auth import users, pwd_context, login_success, login_failed
 
-
-@ui.page('/login')
+@ui.page('/')
 def login_page():
     #Page title
     ui.label('Sign in').classes('text-3xl font-bold text-center mb-5 mx-auto')
@@ -22,10 +21,11 @@ def login_page():
 
     #link for forgot password
     ui.link('Forgot Password?', '#').classes('text-blue-500 hover:underline mb-10')
-
+    ui.label("Don't have an account?")
+    ui.link('Create account', '/registeration').classes('text-blue-500 hover:underline')
 
     #sign in button
-    """def try_login():
+    def try_login():
         username = username_input.value.strip().lower()
         password = password_input.value
 
@@ -33,6 +33,6 @@ def login_page():
         if user and pwd_context.verify(password, user["password_hash"]):
             login_success(username)
         else:
-            login_failed()"""
+            login_failed()
 
-    ui.button('Sign In').classes('w-full mt-4')
+    ui.button('Sign In', on_click=try_login).classes('w-full mt-4')
