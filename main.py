@@ -1,6 +1,4 @@
 from nicegui import ui
-from auth import users, pwd_context, login_success, login_failed
-
 from pages import login, registeration, dashboard
 
 

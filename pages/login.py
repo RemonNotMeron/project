@@ -18,9 +18,8 @@ def login_page():
                 password=True,
                 password_toggle_button=True
             ).props('outlined filled').classes('w-full mb-0')
-
-    #link for forgot password
-    ui.link('Forgot Password?', '#').classes('text-blue-500 hover:underline mb-10')
+    
+    
     ui.label("Don't have an account?")
     ui.link('Create account', '/registeration').classes('text-blue-500 hover:underline')
 
