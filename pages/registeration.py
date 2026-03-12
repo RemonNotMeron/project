@@ -38,7 +38,6 @@ def registration_page():
             full_name = create_full_name.value.strip()
             pw = create_pw.value
             confirm = confirm_pw.value
-            agreed = terms_checkbox.value
 
             if not username or not full_name or not pw:
                 ui.notify('Please fill in all fields.', type='negative')
