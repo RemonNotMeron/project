@@ -12,199 +12,116 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def get_default_decks():
-    """Generate 5 preset decks with sample cards for testing"""
+    """Generate 5 preset Japanese-learning decks for new users.
+
+    The decks follow a natural beginner progression:
+      1. Hiragana vowel row (あ行)   — the absolute starting point
+      2. Hiragana か行 & さ行        — next two gojuon rows
+      3. Kanji: Nature               — high-frequency nature kanji (JLPT N5)
+      4. Kanji: People & Daily Life  — common people/time/object kanji (JLPT N5)
+
+    SRS metadata (repetitions, interval, ef, due_date) is seeded with a
+    spread of values so the library page shows a realistic mix of due,
+    upcoming, and fresh cards right from first login.
+    """
     today = datetime.now()
-    return [
-        {
-            "name": "Biology 101",
-            "description": "Basic biology terms and concepts",
-            "cards": [
-                {
-                    "front": "What is photosynthesis?",
-                    "back": "Process by which plants convert light energy into chemical energy",
-                    "repetitions": 2,
-                    "interval": 3,
-                    "ef": 2.5,
-                    "due_date": (today - timedelta(days=1)).isoformat()
-                },
-                {
-                    "front": "What are mitochondria?",
-                    "back": "Powerhouse of the cell; responsible for producing energy (ATP)",
-                    "repetitions": 1,
-                    "interval": 1,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "Define osmosis",
-                    "back": "Movement of water molecules across a semipermeable membrane",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "What is the function of ribosomes?",
-                    "back": "Protein synthesis; translation of mRNA into proteins",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                }
-            ]
-        },
-        {
-            "name": "Spanish Vocabulary",
-            "description": "Common Spanish words and phrases",
-            "cards": [
-                {
-                    "front": "Hello",
-                    "back": "Hola",
-                    "repetitions": 3,
-                    "interval": 5,
-                    "ef": 2.6,
-                    "due_date": (today - timedelta(days=3)).isoformat()
-                },
-                {
-                    "front": "Thank you",
-                    "back": "Gracias",
-                    "repetitions": 2,
-                    "interval": 3,
-                    "ef": 2.5,
-                    "due_date": (today + timedelta(days=1)).isoformat()
-                },
-                {
-                    "front": "Water",
-                    "back": "Agua",
-                    "repetitions": 1,
-                    "interval": 1,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "Good morning",
-                    "back": "Buenos días",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                }
-            ]
-        },
-        {
-            "name": "World History",
-            "description": "Historical events and dates",
-            "cards": [
-                {
-                    "front": "What year did World War II end?",
-                    "back": "1945",
-                    "repetitions": 2,
-                    "interval": 3,
-                    "ef": 2.5,
-                    "due_date": (today + timedelta(days=1)).isoformat()
-                },
-                {
-                    "front": "Who was the first President of the United States?",
-                    "back": "George Washington",
-                    "repetitions": 1,
-                    "interval": 1,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "In what year did the Titanic sink?",
-                    "back": "1912",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "What ancient wonder is still standing?",
-                    "back": "The Great Pyramid of Giza",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                }
-            ]
-        },
-        {
-            "name": "Chemistry",
-            "description": "Chemical elements and reactions",
-            "cards": [
-                {
-                    "front": "What is the chemical symbol for Gold?",
-                    "back": "Au",
-                    "repetitions": 2,
-                    "interval": 3,
-                    "ef": 2.5,
-                    "due_date": (today + timedelta(days=2)).isoformat()
-                },
-                {
-                    "front": "What is the atomic number of Carbon?",
-                    "back": "6",
-                    "repetitions": 1,
-                    "interval": 1,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "What does pH measure?",
-                    "back": "The acidity or alkalinity of a solution",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "What is the chemical formula for salt?",
-                    "back": "NaCl",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                }
-            ]
-        },
-        {
-            "name": "French Vocabulary",
-            "description": "Common French words and expressions",
-            "cards": [
-                {
-                    "front": "Yes",
-                    "back": "Oui",
-                    "repetitions": 3,
-                    "interval": 5,
-                    "ef": 2.6,
-                    "due_date": (today - timedelta(days=2)).isoformat()
-                },
-                {
-                    "front": "No",
-                    "back": "Non",
-                    "repetitions": 2,
-                    "interval": 3,
-                    "ef": 2.5,
-                    "due_date": (today + timedelta(days=1)).isoformat()
-                },
-                {
-                    "front": "I love you",
-                    "back": "Je t'aime",
-                    "repetitions": 1,
-                    "interval": 1,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                },
-                {
-                    "front": "Excuse me",
-                    "back": "Excusez-moi",
-                    "repetitions": 0,
-                    "interval": 0,
-                    "ef": 2.5,
-                    "due_date": today.isoformat()
-                }
-            ]
+
+    def card(front, back, reps=0, interval=0, ef=2.5, delta_days=0):
+        """Helper to build a card dict with a relative due_date offset."""
+        return {
+            "front": front,
+            "back": back,
+            "repetitions": reps,
+            "interval": interval,
+            "ef": ef,
+            "due_date": (today + timedelta(days=delta_days)).isoformat()
         }
+
+    return [
+        # ------------------------------------------------------------------ #
+        # Deck 1 – Hiragana あ行 (the 5 vowels)
+        # Every Japanese learner starts here. These 5 characters underpin
+        # every other hiragana and katakana sound.
+        # ------------------------------------------------------------------ #
+        {
+            "name": "Hiragana あ行",
+            "description": "The 5 vowels — the very first row of hiragana every learner starts with",
+            "cards": [
+                card("あ", "a  —  as in 'f-a-ther'",            reps=2, interval=3, ef=2.5, delta_days=-1),
+                card("い", "i  —  as in 'mach-i-ne'",            reps=1, interval=1, ef=2.5, delta_days=0),
+                card("う", "u  —  short 'oo', lips unrounded",   reps=0, interval=0, ef=2.5, delta_days=0),
+                card("え", "e  —  as in 'b-e-d'",                reps=0, interval=0, ef=2.5, delta_days=0),
+                card("お", "o  —  as in 'b-o-ne'",               reps=0, interval=0, ef=2.5, delta_days=0),
+            ]
+        },
+        # ------------------------------------------------------------------ #
+        # Deck 2 – Hiragana か行 (K-row)
+        # ------------------------------------------------------------------ #
+        {
+            "name": "Hiragana か行",
+            "description": "K-row — ka, ki, ku, ke, ko",
+            "cards": [
+                card("か", "ka  —  as in 'c-a-r'",   reps=2, interval=3, ef=2.5, delta_days=-3),
+                card("き", "ki  —  as in 'k-ee-p'",  reps=2, interval=3, ef=2.5, delta_days=1),
+                card("く", "ku  —  as in 'c-oo-l' (short u)", reps=1, interval=1, ef=2.5, delta_days=0),
+                card("け", "ke  —  as in 'k-e-t'",   reps=0, interval=0, ef=2.5, delta_days=0),
+                card("こ", "ko  —  as in 'c-o-at'",  reps=0, interval=0, ef=2.5, delta_days=0),
+            ]
+        },
+        # ------------------------------------------------------------------ #
+        # Deck 3 – Hiragana さ行 (S-row)
+        # Note: 'si' does not exist in Japanese — it becomes 'shi'.
+        # ------------------------------------------------------------------ #
+        {
+            "name": "Hiragana さ行",
+            "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
+            "cards": [
+                card("さ", "sa  —  as in 's-a-d'",                    reps=2, interval=3, ef=2.5, delta_days=1),
+                card("し", "shi  —  as in 'sh-ee-p'  (NOT 'si')",     reps=1, interval=1, ef=2.5, delta_days=0),
+                card("す", "su  —  as in 's-oo-n' (very short u)",    reps=0, interval=0, ef=2.5, delta_days=0),
+                card("せ", "se  —  as in 's-e-t'",                    reps=0, interval=0, ef=2.5, delta_days=0),
+                card("そ", "so  —  as in 's-o-ap'",                   reps=0, interval=0, ef=2.5, delta_days=0),
+            ]
+        },
+        # ------------------------------------------------------------------ #
+        # Deck 4 – Kanji: Nature  (JLPT N5)
+        # All 10 appear in everyday vocabulary and the days of the week.
+        # ------------------------------------------------------------------ #
+        {
+            "name": "Kanji: Nature",
+            "description": "Common nature kanji — all appear in everyday words and day names",
+            "cards": [
+                card("日", "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",           reps=3, interval=5, ef=2.6, delta_days=-2),
+                card("月", "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month", reps=2, interval=3, ef=2.5, delta_days=1),
+                card("山", "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",                reps=1, interval=1, ef=2.5, delta_days=0),
+                card("川", "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",             reps=0, interval=0, ef=2.5, delta_days=0),
+                card("火", "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",                 reps=0, interval=0, ef=2.5, delta_days=0),
+                card("木", "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",           reps=0, interval=0, ef=2.5, delta_days=0),
+                card("水", "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",     reps=0, interval=0, ef=2.5, delta_days=0),
+                card("土", "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",         reps=0, interval=0, ef=2.5, delta_days=0),
+                card("空", "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky", reps=0, interval=0, ef=2.5, delta_days=0),
+                card("花", "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",                   reps=0, interval=0, ef=2.5, delta_days=0),
+            ]
+        },
+        # ------------------------------------------------------------------ #
+        # Deck 5 – Kanji: People & Daily Life  (JLPT N5)
+        # ------------------------------------------------------------------ #
+        {
+            "name": "Kanji: People & Daily Life",
+            "description": "High-frequency kanji for people, time, and everyday objects",
+            "cards": [
+                card("人", "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person", reps=3, interval=5, ef=2.6, delta_days=-2),
+                card("子", "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",                      reps=2, interval=3, ef=2.5, delta_days=1),
+                card("女", "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",           reps=1, interval=1, ef=2.5, delta_days=0),
+                card("男", "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",            reps=0, interval=0, ef=2.5, delta_days=0),
+                card("年", "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",            reps=0, interval=0, ef=2.5, delta_days=0),
+                card("時", "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",         reps=0, interval=0, ef=2.5, delta_days=0),
+                card("食", "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",   reps=0, interval=0, ef=2.5, delta_days=0),
+                card("本", "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",         reps=0, interval=0, ef=2.5, delta_days=0),
+                card("大", "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",      reps=0, interval=0, ef=2.5, delta_days=0),
+                card("小", "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school", reps=0, interval=0, ef=2.5, delta_days=0),
+            ]
+        },
     ]
 
 

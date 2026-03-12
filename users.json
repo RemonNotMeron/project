@@ -5,36 +5,44 @@
     "role": "admin",
     "decks": [
       {
-        "name": "Biology 101",
-        "description": "Basic biology terms and concepts",
+        "name": "Hiragana あ行",
+        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "What is photosynthesis?",
-            "back": "Process by which plants convert light energy into chemical energy",
+            "front": "あ",
+            "back": "a  —  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:38.655697"
           },
           {
-            "front": "What are mitochondria?",
-            "back": "Powerhouse of the cell; responsible for producing energy (ATP)",
+            "front": "い",
+            "back": "i  —  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "Define osmosis",
-            "back": "Movement of water molecules across a semipermeable membrane",
+            "front": "う",
+            "back": "u  —  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "What is the function of ribosomes?",
-            "back": "Protein synthesis; translation of mRNA into proteins",
+            "front": "え",
+            "back": "e  —  as in 'b-e-d'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "お",
+            "back": "o  —  as in 'b-o-ne'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -43,36 +51,44 @@
         ]
       },
       {
-        "name": "Spanish Vocabulary",
-        "description": "Common Spanish words and phrases",
+        "name": "Hiragana か行",
+        "description": "K-row — ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "Hello",
-            "back": "Hola",
+            "front": "か",
+            "back": "ka  —  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:38.655697"
           },
           {
-            "front": "Thank you",
-            "back": "Gracias",
+            "front": "き",
+            "back": "ki  —  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "Water",
-            "back": "Agua",
+            "front": "く",
+            "back": "ku  —  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "Good morning",
-            "back": "Buenos d\u00edas",
+            "front": "け",
+            "back": "ke  —  as in 'k-e-t'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "こ",
+            "back": "ko  —  as in 'c-o-at'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -81,36 +97,44 @@
         ]
       },
       {
-        "name": "World History",
-        "description": "Historical events and dates",
+        "name": "Hiragana さ行",
+        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "What year did World War II end?",
-            "back": "1945",
+            "front": "さ",
+            "back": "sa  —  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "Who was the first President of the United States?",
-            "back": "George Washington",
+            "front": "し",
+            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "In what year did the Titanic sink?",
-            "back": "1912",
+            "front": "す",
+            "back": "su  —  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "What ancient wonder is still standing?",
-            "back": "The Great Pyramid of Giza",
+            "front": "せ",
+            "back": "se  —  as in 's-e-t'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "そ",
+            "back": "so  —  as in 's-o-ap'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -119,36 +143,84 @@
         ]
       },
       {
-        "name": "Chemistry",
-        "description": "Chemical elements and reactions",
+        "name": "Kanji: Nature",
+        "description": "Common nature kanji — all appear in everyday words and day names",
         "cards": [
           {
-            "front": "What is the chemical symbol for Gold?",
-            "back": "Au",
+            "front": "日",
+            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:38.655697"
           },
           {
-            "front": "What is the atomic number of Carbon?",
-            "back": "6",
+            "front": "月",
+            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "What does pH measure?",
-            "back": "The acidity or alkalinity of a solution",
+            "front": "山",
+            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "What is the chemical formula for salt?",
-            "back": "NaCl",
+            "front": "川",
+            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "火",
+            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "木",
+            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "水",
+            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "土",
+            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "空",
+            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "花",
+            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -157,36 +229,84 @@
         ]
       },
       {
-        "name": "French Vocabulary",
-        "description": "Common French words and expressions",
+        "name": "Kanji: People & Daily Life",
+        "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "Yes",
-            "back": "Oui",
+            "front": "人",
+            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:38.655697"
           },
           {
-            "front": "No",
-            "back": "Non",
+            "front": "子",
+            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "I love you",
-            "back": "Je t'aime",
+            "front": "女",
+            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "Excuse me",
-            "back": "Excusez-moi",
+            "front": "男",
+            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "年",
+            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "時",
+            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "食",
+            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "本",
+            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "大",
+            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "小",
+            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -202,192 +322,312 @@
     "role": "user",
     "decks": [
       {
-        "name": "Biology 101",
-        "description": "Basic biology terms and concepts",
+        "name": "Hiragana あ行",
+        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "What is photosynthesis?",
-            "back": "Process by which plants convert light energy into chemical energy",
+            "front": "あ",
+            "back": "a  —  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:38.858905"
           },
           {
-            "front": "What are mitochondria?",
-            "back": "Powerhouse of the cell; responsible for producing energy (ATP)",
+            "front": "い",
+            "back": "i  —  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "Define osmosis",
-            "back": "Movement of water molecules across a semipermeable membrane",
+            "front": "う",
+            "back": "u  —  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "What is the function of ribosomes?",
-            "back": "Protein synthesis; translation of mRNA into proteins",
+            "front": "え",
+            "back": "e  —  as in 'b-e-d'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
+          },
+          {
+            "front": "お",
+            "back": "o  —  as in 'b-o-ne'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "Spanish Vocabulary",
-        "description": "Common Spanish words and phrases",
+        "name": "Hiragana か行",
+        "description": "K-row — ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "Hello",
-            "back": "Hola",
+            "front": "か",
+            "back": "ka  —  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:38.858905"
           },
           {
-            "front": "Thank you",
-            "back": "Gracias",
+            "front": "き",
+            "back": "ki  —  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "Water",
-            "back": "Agua",
+            "front": "く",
+            "back": "ku  —  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "Good morning",
-            "back": "Buenos d\u00edas",
+            "front": "け",
+            "back": "ke  —  as in 'k-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
+          },
+          {
+            "front": "こ",
+            "back": "ko  —  as in 'c-o-at'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "World History",
-        "description": "Historical events and dates",
+        "name": "Hiragana さ行",
+        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "What year did World War II end?",
-            "back": "1945",
+            "front": "さ",
+            "back": "sa  —  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "Who was the first President of the United States?",
-            "back": "George Washington",
+            "front": "し",
+            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "In what year did the Titanic sink?",
-            "back": "1912",
+            "front": "す",
+            "back": "su  —  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "What ancient wonder is still standing?",
-            "back": "The Great Pyramid of Giza",
+            "front": "せ",
+            "back": "se  —  as in 's-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
+          },
+          {
+            "front": "そ",
+            "back": "so  —  as in 's-o-ap'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "Chemistry",
-        "description": "Chemical elements and reactions",
+        "name": "Kanji: Nature",
+        "description": "Common nature kanji — all appear in everyday words and day names",
         "cards": [
           {
-            "front": "What is the chemical symbol for Gold?",
-            "back": "Au",
+            "front": "日",
+            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:38.858905"
           },
           {
-            "front": "What is the atomic number of Carbon?",
-            "back": "6",
+            "front": "月",
+            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "What does pH measure?",
-            "back": "The acidity or alkalinity of a solution",
+            "front": "山",
+            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "What is the chemical formula for salt?",
-            "back": "NaCl",
+            "front": "川",
+            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
+          },
+          {
+            "front": "火",
+            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "木",
+            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "水",
+            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "土",
+            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "空",
+            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "花",
+            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "French Vocabulary",
-        "description": "Common French words and expressions",
+        "name": "Kanji: People & Daily Life",
+        "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "Yes",
-            "back": "Oui",
+            "front": "人",
+            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:38.858905"
           },
           {
-            "front": "No",
-            "back": "Non",
+            "front": "子",
+            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "I love you",
-            "back": "Je t'aime",
+            "front": "女",
+            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "Excuse me",
-            "back": "Excusez-moi",
+            "front": "男",
+            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
+          },
+          {
+            "front": "年",
+            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "時",
+            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "食",
+            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "本",
+            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "大",
+            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "小",
+            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       }
@@ -399,192 +639,312 @@
     "role": "user",
     "decks": [
       {
-        "name": "Biology 101",
-        "description": "Basic biology terms and concepts",
+        "name": "Hiragana あ行",
+        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "What is photosynthesis?",
-            "back": "Process by which plants convert light energy into chemical energy",
+            "front": "あ",
+            "back": "a  —  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:52.380554"
           },
           {
-            "front": "What are mitochondria?",
-            "back": "Powerhouse of the cell; responsible for producing energy (ATP)",
+            "front": "い",
+            "back": "i  —  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "Define osmosis",
-            "back": "Movement of water molecules across a semipermeable membrane",
+            "front": "う",
+            "back": "u  —  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "What is the function of ribosomes?",
-            "back": "Protein synthesis; translation of mRNA into proteins",
+            "front": "え",
+            "back": "e  —  as in 'b-e-d'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
+          },
+          {
+            "front": "お",
+            "back": "o  —  as in 'b-o-ne'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "Spanish Vocabulary",
-        "description": "Common Spanish words and phrases",
+        "name": "Hiragana か行",
+        "description": "K-row — ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "Hello",
-            "back": "Hola",
+            "front": "か",
+            "back": "ka  —  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:52.380554"
           },
           {
-            "front": "Thank you",
-            "back": "Gracias",
+            "front": "き",
+            "back": "ki  —  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "Water",
-            "back": "Agua",
+            "front": "く",
+            "back": "ku  —  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "Good morning",
-            "back": "Buenos d\u00edas",
+            "front": "け",
+            "back": "ke  —  as in 'k-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
+          },
+          {
+            "front": "こ",
+            "back": "ko  —  as in 'c-o-at'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "World History",
-        "description": "Historical events and dates",
+        "name": "Hiragana さ行",
+        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "What year did World War II end?",
-            "back": "1945",
+            "front": "さ",
+            "back": "sa  —  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "Who was the first President of the United States?",
-            "back": "George Washington",
+            "front": "し",
+            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "In what year did the Titanic sink?",
-            "back": "1912",
+            "front": "す",
+            "back": "su  —  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "What ancient wonder is still standing?",
-            "back": "The Great Pyramid of Giza",
+            "front": "せ",
+            "back": "se  —  as in 's-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
+          },
+          {
+            "front": "そ",
+            "back": "so  —  as in 's-o-ap'",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "Chemistry",
-        "description": "Chemical elements and reactions",
+        "name": "Kanji: Nature",
+        "description": "Common nature kanji — all appear in everyday words and day names",
         "cards": [
           {
-            "front": "What is the chemical symbol for Gold?",
-            "back": "Au",
+            "front": "日",
+            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:52.380554"
           },
           {
-            "front": "What is the atomic number of Carbon?",
-            "back": "6",
+            "front": "月",
+            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "What does pH measure?",
-            "back": "The acidity or alkalinity of a solution",
+            "front": "山",
+            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "What is the chemical formula for salt?",
-            "back": "NaCl",
+            "front": "川",
+            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
+          },
+          {
+            "front": "火",
+            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "木",
+            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "水",
+            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "土",
+            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "空",
+            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "花",
+            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       },
       {
-        "name": "French Vocabulary",
-        "description": "Common French words and expressions",
+        "name": "Kanji: People & Daily Life",
+        "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "Yes",
-            "back": "Oui",
+            "front": "人",
+            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:52.380554"
           },
           {
-            "front": "No",
-            "back": "Non",
+            "front": "子",
+            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "I love you",
-            "back": "Je t'aime",
+            "front": "女",
+            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "Excuse me",
-            "back": "Excusez-moi",
+            "front": "男",
+            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
+          },
+          {
+            "front": "年",
+            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "時",
+            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "食",
+            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "本",
+            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "大",
+            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
+          },
+          {
+            "front": "小",
+            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-10T14:03:38.655697"
           }
         ]
       }
