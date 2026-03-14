@@ -1,5 +1,5 @@
 from nicegui import ui
-from pages import login, registeration, dashboard, flashcard_library, progress_visualiser, create_new_deck, flashcard_deck
+from pages import login, registeration, dashboard, flashcard_library, progress_visualiser, create_new_deck, flashcard_deck, preference_settings
 
 
 if __name__ in {'__main__', '__mp_main__'}:

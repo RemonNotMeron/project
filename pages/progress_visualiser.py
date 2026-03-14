@@ -210,7 +210,7 @@ def progress_visualiser():
         stats_tab = ui.tab('Statistics')
         graph_tab = ui.tab('Graph')
     
-    with ui.tab_panels(tabs).classes('w-full'):
+    with ui.tab_panels(tabs, value=stats_tab).classes('w-full'):
         # Statistics Tab
         with ui.tab_panel(stats_tab):
             stats = calculate_card_stats(user)
