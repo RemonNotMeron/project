@@ -5,44 +5,44 @@
     "role": "admin",
     "decks": [
       {
-        "name": "Hiragana あ行",
-        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
+        "name": "Hiragana \u3042\u884c",
+        "description": "The 5 vowels \u2014 the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "あ",
-            "back": "a  —  as in 'f-a-ther'",
+            "front": "\u3042",
+            "back": "a  \u2014  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:38.655697"
           },
           {
-            "front": "い",
-            "back": "i  —  as in 'mach-i-ne'",
+            "front": "\u3044",
+            "back": "i  \u2014  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "う",
-            "back": "u  —  short 'oo', lips unrounded (no pucker)",
+            "front": "\u3046",
+            "back": "u  \u2014  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "え",
-            "back": "e  —  as in 'b-e-d'",
+            "front": "\u3048",
+            "back": "e  \u2014  as in 'b-e-d'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "お",
-            "back": "o  —  as in 'b-o-ne'",
+            "front": "\u304a",
+            "back": "o  \u2014  as in 'b-o-ne'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -51,44 +51,44 @@
         ]
       },
       {
-        "name": "Hiragana か行",
-        "description": "K-row — ka, ki, ku, ke, ko",
+        "name": "Hiragana \u304b\u884c",
+        "description": "K-row \u2014 ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "か",
-            "back": "ka  —  as in 'c-a-r'",
+            "front": "\u304b",
+            "back": "ka  \u2014  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:38.655697"
           },
           {
-            "front": "き",
-            "back": "ki  —  as in 'k-ee-p'",
+            "front": "\u304d",
+            "back": "ki  \u2014  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "く",
-            "back": "ku  —  as in 'c-oo-l' (short)",
+            "front": "\u304f",
+            "back": "ku  \u2014  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "け",
-            "back": "ke  —  as in 'k-e-t'",
+            "front": "\u3051",
+            "back": "ke  \u2014  as in 'k-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "こ",
-            "back": "ko  —  as in 'c-o-at'",
+            "front": "\u3053",
+            "back": "ko  \u2014  as in 'c-o-at'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -97,44 +97,44 @@
         ]
       },
       {
-        "name": "Hiragana さ行",
-        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
+        "name": "Hiragana \u3055\u884c",
+        "description": "S-row \u2014 sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "さ",
-            "back": "sa  —  as in 's-a-d'",
+            "front": "\u3055",
+            "back": "sa  \u2014  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "し",
-            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
+            "front": "\u3057",
+            "back": "shi  \u2014  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "す",
-            "back": "su  —  as in 's-oo-n' (very short u)",
+            "front": "\u3059",
+            "back": "su  \u2014  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "せ",
-            "back": "se  —  as in 's-e-t'",
+            "front": "\u305b",
+            "back": "se  \u2014  as in 's-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "そ",
-            "back": "so  —  as in 's-o-ap'",
+            "front": "\u305d",
+            "back": "so  \u2014  as in 's-o-ap'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -144,83 +144,83 @@
       },
       {
         "name": "Kanji: Nature",
-        "description": "Common nature kanji — all appear in everyday words and day names",
+        "description": "Common nature kanji \u2014 all appear in everyday words and day names",
         "cards": [
           {
-            "front": "日",
-            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
+            "front": "\u65e5",
+            "back": "\u306b\u3061 / \u3072  (nichi / hi)  \u2014  sun; day\nEx: \u4eca\u65e5 (\u304d\u3087\u3046) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:38.655697"
           },
           {
-            "front": "月",
-            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
+            "front": "\u6708",
+            "back": "\u3064\u304d / \u3052\u3064  (tsuki / getsu)  \u2014  moon; month\nEx: \u4eca\u6708 (\u3053\u3093\u3052\u3064) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "山",
-            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
+            "front": "\u5c71",
+            "back": "\u3084\u307e  (yama)  \u2014  mountain\nEx: \u5bcc\u58eb\u5c71 (\u3075\u3058\u3055\u3093) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "川",
-            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
+            "front": "\u5ddd",
+            "back": "\u304b\u308f  (kawa)  \u2014  river\nEx: \u5ddd\u53e3 (\u304b\u308f\u3050\u3061) = Kawaguchi city",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "火",
-            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "front": "\u706b",
+            "back": "\u3072 / \u304b  (hi / ka)  \u2014  fire\nEx: \u706b\u5c71 (\u304b\u3056\u3093) = volcano",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "木",
-            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "front": "\u6728",
+            "back": "\u304d / \u3082\u304f  (ki / moku)  \u2014  tree; wood\nEx: \u6728\u3005 (\u304d\u304e) = trees",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "水",
-            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "front": "\u6c34",
+            "back": "\u307f\u305a / \u3059\u3044  (mizu / sui)  \u2014  water\nEx: \u6c34\u9053 (\u3059\u3044\u3069\u3046) = tap water",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "土",
-            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "front": "\u571f",
+            "back": "\u3064\u3061 / \u3069  (tsuchi / do)  \u2014  earth; soil\nEx: \u571f\u5730 (\u3068\u3061) = land",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "空",
-            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "front": "\u7a7a",
+            "back": "\u305d\u3089 / \u304f\u3046  (sora / kuu)  \u2014  sky; empty\nEx: \u9752\u7a7a (\u3042\u304a\u305e\u3089) = blue sky",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "花",
-            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
+            "front": "\u82b1",
+            "back": "\u306f\u306a  (hana)  \u2014  flower\nEx: \u82b1\u706b (\u306f\u306a\u3073) = fireworks",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -233,80 +233,80 @@
         "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "人",
-            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
+            "front": "\u4eba",
+            "back": "\u3072\u3068 / \u3058\u3093  (hito / jin)  \u2014  person\nEx: \u65e5\u672c\u4eba (\u306b\u307b\u3093\u3058\u3093) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:38.655697"
           },
           {
-            "front": "子",
-            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
+            "front": "\u5b50",
+            "back": "\u3053 / \u3057  (ko / shi)  \u2014  child\nEx: \u5b50\u4f9b (\u3053\u3069\u3082) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.655697"
           },
           {
-            "front": "女",
-            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
+            "front": "\u5973",
+            "back": "\u304a\u3093\u306a / \u3058\u3087  (onna / jo)  \u2014  woman\nEx: \u5973\u306e\u5b50 (\u304a\u3093\u306a\u306e\u3053) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "男",
-            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
+            "front": "\u7537",
+            "back": "\u304a\u3068\u3053 / \u3060\u3093  (otoko / dan)  \u2014  man\nEx: \u7537\u306e\u5b50 (\u304a\u3068\u3053\u306e\u3053) = boy",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "年",
-            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "front": "\u5e74",
+            "back": "\u3068\u3057 / \u306d\u3093  (toshi / nen)  \u2014  year\nEx: \u4eca\u5e74 (\u3053\u3068\u3057) = this year",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "時",
-            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "front": "\u6642",
+            "back": "\u3068\u304d / \u3058  (toki / ji)  \u2014  time; hour\nEx: \u4f55\u6642 (\u306a\u3093\u3058) = what time?",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "食",
-            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "front": "\u98df",
+            "back": "\u305f\u3079\u308b / \u3057\u3087\u304f  (taberu / shoku)  \u2014  eat; food\nEx: \u98df\u4e8b (\u3057\u3087\u304f\u3058) = meal",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "本",
-            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "front": "\u672c",
+            "back": "\u307b\u3093 / \u3082\u3068  (hon / moto)  \u2014  book; origin\nEx: \u65e5\u672c (\u306b\u307b\u3093) = Japan",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "大",
-            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "front": "\u5927",
+            "back": "\u304a\u304a / \u3060\u3044  (oo / dai)  \u2014  big; great\nEx: \u5927\u5b66 (\u3060\u3044\u304c\u304f) = university",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "小",
-            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
+            "front": "\u5c0f",
+            "back": "\u3061\u3044 / \u3057\u3087\u3046  (chii / shou)  \u2014  small\nEx: \u5c0f\u5b66\u6821 (\u3057\u3087\u3046\u304c\u3063\u3053\u3046) = primary school",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -322,44 +322,44 @@
     "role": "user",
     "decks": [
       {
-        "name": "Hiragana あ行",
-        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
+        "name": "Hiragana \u3042\u884c",
+        "description": "The 5 vowels \u2014 the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "あ",
-            "back": "a  —  as in 'f-a-ther'",
+            "front": "\u3042",
+            "back": "a  \u2014  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:38.858905"
           },
           {
-            "front": "い",
-            "back": "i  —  as in 'mach-i-ne'",
+            "front": "\u3044",
+            "back": "i  \u2014  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "う",
-            "back": "u  —  short 'oo', lips unrounded (no pucker)",
+            "front": "\u3046",
+            "back": "u  \u2014  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "え",
-            "back": "e  —  as in 'b-e-d'",
+            "front": "\u3048",
+            "back": "e  \u2014  as in 'b-e-d'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "お",
-            "back": "o  —  as in 'b-o-ne'",
+            "front": "\u304a",
+            "back": "o  \u2014  as in 'b-o-ne'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -368,44 +368,44 @@
         ]
       },
       {
-        "name": "Hiragana か行",
-        "description": "K-row — ka, ki, ku, ke, ko",
+        "name": "Hiragana \u304b\u884c",
+        "description": "K-row \u2014 ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "か",
-            "back": "ka  —  as in 'c-a-r'",
+            "front": "\u304b",
+            "back": "ka  \u2014  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:38.858905"
           },
           {
-            "front": "き",
-            "back": "ki  —  as in 'k-ee-p'",
+            "front": "\u304d",
+            "back": "ki  \u2014  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "く",
-            "back": "ku  —  as in 'c-oo-l' (short)",
+            "front": "\u304f",
+            "back": "ku  \u2014  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "け",
-            "back": "ke  —  as in 'k-e-t'",
+            "front": "\u3051",
+            "back": "ke  \u2014  as in 'k-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "こ",
-            "back": "ko  —  as in 'c-o-at'",
+            "front": "\u3053",
+            "back": "ko  \u2014  as in 'c-o-at'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -414,44 +414,44 @@
         ]
       },
       {
-        "name": "Hiragana さ行",
-        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
+        "name": "Hiragana \u3055\u884c",
+        "description": "S-row \u2014 sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "さ",
-            "back": "sa  —  as in 's-a-d'",
+            "front": "\u3055",
+            "back": "sa  \u2014  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "し",
-            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
+            "front": "\u3057",
+            "back": "shi  \u2014  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "す",
-            "back": "su  —  as in 's-oo-n' (very short u)",
+            "front": "\u3059",
+            "back": "su  \u2014  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "せ",
-            "back": "se  —  as in 's-e-t'",
+            "front": "\u305b",
+            "back": "se  \u2014  as in 's-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "そ",
-            "back": "so  —  as in 's-o-ap'",
+            "front": "\u305d",
+            "back": "so  \u2014  as in 's-o-ap'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -461,83 +461,83 @@
       },
       {
         "name": "Kanji: Nature",
-        "description": "Common nature kanji — all appear in everyday words and day names",
+        "description": "Common nature kanji \u2014 all appear in everyday words and day names",
         "cards": [
           {
-            "front": "日",
-            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
+            "front": "\u65e5",
+            "back": "\u306b\u3061 / \u3072  (nichi / hi)  \u2014  sun; day\nEx: \u4eca\u65e5 (\u304d\u3087\u3046) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:38.858905"
           },
           {
-            "front": "月",
-            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
+            "front": "\u6708",
+            "back": "\u3064\u304d / \u3052\u3064  (tsuki / getsu)  \u2014  moon; month\nEx: \u4eca\u6708 (\u3053\u3093\u3052\u3064) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "山",
-            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
+            "front": "\u5c71",
+            "back": "\u3084\u307e  (yama)  \u2014  mountain\nEx: \u5bcc\u58eb\u5c71 (\u3075\u3058\u3055\u3093) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "川",
-            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
+            "front": "\u5ddd",
+            "back": "\u304b\u308f  (kawa)  \u2014  river\nEx: \u5ddd\u53e3 (\u304b\u308f\u3050\u3061) = Kawaguchi city",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "火",
-            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "front": "\u706b",
+            "back": "\u3072 / \u304b  (hi / ka)  \u2014  fire\nEx: \u706b\u5c71 (\u304b\u3056\u3093) = volcano",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "木",
-            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "front": "\u6728",
+            "back": "\u304d / \u3082\u304f  (ki / moku)  \u2014  tree; wood\nEx: \u6728\u3005 (\u304d\u304e) = trees",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "水",
-            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "front": "\u6c34",
+            "back": "\u307f\u305a / \u3059\u3044  (mizu / sui)  \u2014  water\nEx: \u6c34\u9053 (\u3059\u3044\u3069\u3046) = tap water",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "土",
-            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "front": "\u571f",
+            "back": "\u3064\u3061 / \u3069  (tsuchi / do)  \u2014  earth; soil\nEx: \u571f\u5730 (\u3068\u3061) = land",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "空",
-            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "front": "\u7a7a",
+            "back": "\u305d\u3089 / \u304f\u3046  (sora / kuu)  \u2014  sky; empty\nEx: \u9752\u7a7a (\u3042\u304a\u305e\u3089) = blue sky",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "花",
-            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
+            "front": "\u82b1",
+            "back": "\u306f\u306a  (hana)  \u2014  flower\nEx: \u82b1\u706b (\u306f\u306a\u3073) = fireworks",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -550,80 +550,80 @@
         "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "人",
-            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
+            "front": "\u4eba",
+            "back": "\u3072\u3068 / \u3058\u3093  (hito / jin)  \u2014  person\nEx: \u65e5\u672c\u4eba (\u306b\u307b\u3093\u3058\u3093) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:38.858905"
           },
           {
-            "front": "子",
-            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
+            "front": "\u5b50",
+            "back": "\u3053 / \u3057  (ko / shi)  \u2014  child\nEx: \u5b50\u4f9b (\u3053\u3069\u3082) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:38.858905"
           },
           {
-            "front": "女",
-            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
+            "front": "\u5973",
+            "back": "\u304a\u3093\u306a / \u3058\u3087  (onna / jo)  \u2014  woman\nEx: \u5973\u306e\u5b50 (\u304a\u3093\u306a\u306e\u3053) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "男",
-            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
+            "front": "\u7537",
+            "back": "\u304a\u3068\u3053 / \u3060\u3093  (otoko / dan)  \u2014  man\nEx: \u7537\u306e\u5b50 (\u304a\u3068\u3053\u306e\u3053) = boy",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.858905"
           },
           {
-            "front": "年",
-            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "front": "\u5e74",
+            "back": "\u3068\u3057 / \u306d\u3093  (toshi / nen)  \u2014  year\nEx: \u4eca\u5e74 (\u3053\u3068\u3057) = this year",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "時",
-            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "front": "\u6642",
+            "back": "\u3068\u304d / \u3058  (toki / ji)  \u2014  time; hour\nEx: \u4f55\u6642 (\u306a\u3093\u3058) = what time?",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "食",
-            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "front": "\u98df",
+            "back": "\u305f\u3079\u308b / \u3057\u3087\u304f  (taberu / shoku)  \u2014  eat; food\nEx: \u98df\u4e8b (\u3057\u3087\u304f\u3058) = meal",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "本",
-            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "front": "\u672c",
+            "back": "\u307b\u3093 / \u3082\u3068  (hon / moto)  \u2014  book; origin\nEx: \u65e5\u672c (\u306b\u307b\u3093) = Japan",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "大",
-            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "front": "\u5927",
+            "back": "\u304a\u304a / \u3060\u3044  (oo / dai)  \u2014  big; great\nEx: \u5927\u5b66 (\u3060\u3044\u304c\u304f) = university",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "小",
-            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
+            "front": "\u5c0f",
+            "back": "\u3061\u3044 / \u3057\u3087\u3046  (chii / shou)  \u2014  small\nEx: \u5c0f\u5b66\u6821 (\u3057\u3087\u3046\u304c\u3063\u3053\u3046) = primary school",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -639,44 +639,44 @@
     "role": "user",
     "decks": [
       {
-        "name": "Hiragana あ行",
-        "description": "The 5 vowels — the very first row of hiragana every learner starts with",
+        "name": "Hiragana \u3042\u884c",
+        "description": "The 5 vowels \u2014 the very first row of hiragana every learner starts with",
         "cards": [
           {
-            "front": "あ",
-            "back": "a  —  as in 'f-a-ther'",
+            "front": "\u3042",
+            "back": "a  \u2014  as in 'f-a-ther'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-09T14:03:52.380554"
           },
           {
-            "front": "い",
-            "back": "i  —  as in 'mach-i-ne'",
+            "front": "\u3044",
+            "back": "i  \u2014  as in 'mach-i-ne'",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "う",
-            "back": "u  —  short 'oo', lips unrounded (no pucker)",
+            "front": "\u3046",
+            "back": "u  \u2014  short 'oo', lips unrounded (no pucker)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "え",
-            "back": "e  —  as in 'b-e-d'",
+            "front": "\u3048",
+            "back": "e  \u2014  as in 'b-e-d'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "お",
-            "back": "o  —  as in 'b-o-ne'",
+            "front": "\u304a",
+            "back": "o  \u2014  as in 'b-o-ne'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -685,44 +685,44 @@
         ]
       },
       {
-        "name": "Hiragana か行",
-        "description": "K-row — ka, ki, ku, ke, ko",
+        "name": "Hiragana \u304b\u884c",
+        "description": "K-row \u2014 ka, ki, ku, ke, ko",
         "cards": [
           {
-            "front": "か",
-            "back": "ka  —  as in 'c-a-r'",
+            "front": "\u304b",
+            "back": "ka  \u2014  as in 'c-a-r'",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-07T14:03:52.380554"
           },
           {
-            "front": "き",
-            "back": "ki  —  as in 'k-ee-p'",
+            "front": "\u304d",
+            "back": "ki  \u2014  as in 'k-ee-p'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "く",
-            "back": "ku  —  as in 'c-oo-l' (short)",
+            "front": "\u304f",
+            "back": "ku  \u2014  as in 'c-oo-l' (short)",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "け",
-            "back": "ke  —  as in 'k-e-t'",
+            "front": "\u3051",
+            "back": "ke  \u2014  as in 'k-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "こ",
-            "back": "ko  —  as in 'c-o-at'",
+            "front": "\u3053",
+            "back": "ko  \u2014  as in 'c-o-at'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -731,44 +731,44 @@
         ]
       },
       {
-        "name": "Hiragana さ行",
-        "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
+        "name": "Hiragana \u3055\u884c",
+        "description": "S-row \u2014 sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
         "cards": [
           {
-            "front": "さ",
-            "back": "sa  —  as in 's-a-d'",
+            "front": "\u3055",
+            "back": "sa  \u2014  as in 's-a-d'",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "し",
-            "back": "shi  —  as in 'sh-ee-p'  (NOT 'si')",
+            "front": "\u3057",
+            "back": "shi  \u2014  as in 'sh-ee-p'  (NOT 'si')",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "す",
-            "back": "su  —  as in 's-oo-n' (very short u)",
+            "front": "\u3059",
+            "back": "su  \u2014  as in 's-oo-n' (very short u)",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "せ",
-            "back": "se  —  as in 's-e-t'",
+            "front": "\u305b",
+            "back": "se  \u2014  as in 's-e-t'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "そ",
-            "back": "so  —  as in 's-o-ap'",
+            "front": "\u305d",
+            "back": "so  \u2014  as in 's-o-ap'",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -778,83 +778,83 @@
       },
       {
         "name": "Kanji: Nature",
-        "description": "Common nature kanji — all appear in everyday words and day names",
+        "description": "Common nature kanji \u2014 all appear in everyday words and day names",
         "cards": [
           {
-            "front": "日",
-            "back": "にち / ひ  (nichi / hi)  —  sun; day\nEx: 今日 (きょう) = today",
+            "front": "\u65e5",
+            "back": "\u306b\u3061 / \u3072  (nichi / hi)  \u2014  sun; day\nEx: \u4eca\u65e5 (\u304d\u3087\u3046) = today",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-12T14:03:52.380554"
           },
           {
-            "front": "月",
-            "back": "つき / げつ  (tsuki / getsu)  —  moon; month\nEx: 今月 (こんげつ) = this month",
+            "front": "\u6708",
+            "back": "\u3064\u304d / \u3052\u3064  (tsuki / getsu)  \u2014  moon; month\nEx: \u4eca\u6708 (\u3053\u3093\u3052\u3064) = this month",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "山",
-            "back": "やま  (yama)  —  mountain\nEx: 富士山 (ふじさん) = Mt Fuji",
+            "front": "\u5c71",
+            "back": "\u3084\u307e  (yama)  \u2014  mountain\nEx: \u5bcc\u58eb\u5c71 (\u3075\u3058\u3055\u3093) = Mt Fuji",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "川",
-            "back": "かわ  (kawa)  —  river\nEx: 川口 (かわぐち) = Kawaguchi city",
+            "front": "\u5ddd",
+            "back": "\u304b\u308f  (kawa)  \u2014  river\nEx: \u5ddd\u53e3 (\u304b\u308f\u3050\u3061) = Kawaguchi city",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "火",
-            "back": "ひ / か  (hi / ka)  —  fire\nEx: 火山 (かざん) = volcano",
+            "front": "\u706b",
+            "back": "\u3072 / \u304b  (hi / ka)  \u2014  fire\nEx: \u706b\u5c71 (\u304b\u3056\u3093) = volcano",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "木",
-            "back": "き / もく  (ki / moku)  —  tree; wood\nEx: 木々 (きぎ) = trees",
+            "front": "\u6728",
+            "back": "\u304d / \u3082\u304f  (ki / moku)  \u2014  tree; wood\nEx: \u6728\u3005 (\u304d\u304e) = trees",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "水",
-            "back": "みず / すい  (mizu / sui)  —  water\nEx: 水道 (すいどう) = tap water",
+            "front": "\u6c34",
+            "back": "\u307f\u305a / \u3059\u3044  (mizu / sui)  \u2014  water\nEx: \u6c34\u9053 (\u3059\u3044\u3069\u3046) = tap water",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "土",
-            "back": "つち / ど  (tsuchi / do)  —  earth; soil\nEx: 土地 (とち) = land",
+            "front": "\u571f",
+            "back": "\u3064\u3061 / \u3069  (tsuchi / do)  \u2014  earth; soil\nEx: \u571f\u5730 (\u3068\u3061) = land",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "空",
-            "back": "そら / くう  (sora / kuu)  —  sky; empty\nEx: 青空 (あおぞら) = blue sky",
+            "front": "\u7a7a",
+            "back": "\u305d\u3089 / \u304f\u3046  (sora / kuu)  \u2014  sky; empty\nEx: \u9752\u7a7a (\u3042\u304a\u305e\u3089) = blue sky",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "花",
-            "back": "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",
+            "front": "\u82b1",
+            "back": "\u306f\u306a  (hana)  \u2014  flower\nEx: \u82b1\u706b (\u306f\u306a\u3073) = fireworks",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
@@ -867,84 +867,106 @@
         "description": "High-frequency kanji for people, time, and everyday objects",
         "cards": [
           {
-            "front": "人",
-            "back": "ひと / じん  (hito / jin)  —  person\nEx: 日本人 (にほんじん) = Japanese person",
+            "front": "\u4eba",
+            "back": "\u3072\u3068 / \u3058\u3093  (hito / jin)  \u2014  person\nEx: \u65e5\u672c\u4eba (\u306b\u307b\u3093\u3058\u3093) = Japanese person",
             "repetitions": 3,
             "interval": 5,
             "ef": 2.6,
             "due_date": "2026-03-08T14:03:52.380554"
           },
           {
-            "front": "子",
-            "back": "こ / し  (ko / shi)  —  child\nEx: 子供 (こども) = child",
+            "front": "\u5b50",
+            "back": "\u3053 / \u3057  (ko / shi)  \u2014  child\nEx: \u5b50\u4f9b (\u3053\u3069\u3082) = child",
             "repetitions": 2,
             "interval": 3,
             "ef": 2.5,
             "due_date": "2026-03-11T14:03:52.380554"
           },
           {
-            "front": "女",
-            "back": "おんな / じょ  (onna / jo)  —  woman\nEx: 女の子 (おんなのこ) = girl",
+            "front": "\u5973",
+            "back": "\u304a\u3093\u306a / \u3058\u3087  (onna / jo)  \u2014  woman\nEx: \u5973\u306e\u5b50 (\u304a\u3093\u306a\u306e\u3053) = girl",
             "repetitions": 1,
             "interval": 1,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "男",
-            "back": "おとこ / だん  (otoko / dan)  —  man\nEx: 男の子 (おとこのこ) = boy",
+            "front": "\u7537",
+            "back": "\u304a\u3068\u3053 / \u3060\u3093  (otoko / dan)  \u2014  man\nEx: \u7537\u306e\u5b50 (\u304a\u3068\u3053\u306e\u3053) = boy",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:52.380554"
           },
           {
-            "front": "年",
-            "back": "とし / ねん  (toshi / nen)  —  year\nEx: 今年 (ことし) = this year",
+            "front": "\u5e74",
+            "back": "\u3068\u3057 / \u306d\u3093  (toshi / nen)  \u2014  year\nEx: \u4eca\u5e74 (\u3053\u3068\u3057) = this year",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "時",
-            "back": "とき / じ  (toki / ji)  —  time; hour\nEx: 何時 (なんじ) = what time?",
+            "front": "\u6642",
+            "back": "\u3068\u304d / \u3058  (toki / ji)  \u2014  time; hour\nEx: \u4f55\u6642 (\u306a\u3093\u3058) = what time?",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "食",
-            "back": "たべる / しょく  (taberu / shoku)  —  eat; food\nEx: 食事 (しょくじ) = meal",
+            "front": "\u98df",
+            "back": "\u305f\u3079\u308b / \u3057\u3087\u304f  (taberu / shoku)  \u2014  eat; food\nEx: \u98df\u4e8b (\u3057\u3087\u304f\u3058) = meal",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "本",
-            "back": "ほん / もと  (hon / moto)  —  book; origin\nEx: 日本 (にほん) = Japan",
+            "front": "\u672c",
+            "back": "\u307b\u3093 / \u3082\u3068  (hon / moto)  \u2014  book; origin\nEx: \u65e5\u672c (\u306b\u307b\u3093) = Japan",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "大",
-            "back": "おお / だい  (oo / dai)  —  big; great\nEx: 大学 (だいがく) = university",
+            "front": "\u5927",
+            "back": "\u304a\u304a / \u3060\u3044  (oo / dai)  \u2014  big; great\nEx: \u5927\u5b66 (\u3060\u3044\u304c\u304f) = university",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
           },
           {
-            "front": "小",
-            "back": "ちい / しょう  (chii / shou)  —  small\nEx: 小学校 (しょうがっこう) = primary school",
+            "front": "\u5c0f",
+            "back": "\u3061\u3044 / \u3057\u3087\u3046  (chii / shou)  \u2014  small\nEx: \u5c0f\u5b66\u6821 (\u3057\u3087\u3046\u304c\u3063\u3053\u3046) = primary school",
             "repetitions": 0,
             "interval": 0,
             "ef": 2.5,
             "due_date": "2026-03-10T14:03:38.655697"
+          }
+        ]
+      },
+      {
+        "name": "sdf",
+        "description": "",
+        "cards": [
+          {
+            "front": "Kana",
+            "back": "hira",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-14T13:31:29.480228"
+          },
+          {
+            "front": "sdfadfas",
+            "back": "asdfsdfs",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-14T13:31:29.480228"
           }
         ]
       }

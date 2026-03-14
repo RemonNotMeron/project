@@ -147,30 +147,23 @@ def create_new_deck_page():
                 ui.label(f'of {len(current_cards)}').classes('text-sm text-grey-5')
 
             # Front input
+            # bind_value(card, 'front') keeps the input and the dict entry
+            # in sync automatically — no event handler needed, so there is
+            # no risk of the GenericEventArguments/.value crash.
             ui.label('Front').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
-            front_in = ui.input(
+            ui.input(
                 placeholder='Character, word, or question…',
-                value=card['front']
-            ).props('outlined').classes('w-full text-lg mb-4')
+            ).props('outlined').classes('w-full text-lg mb-4') \
+             .bind_value(card, 'front') \
+             .on('update:model-value', lambda _: _build_list())
 
             # Back textarea
             ui.label('Back').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
-            back_in = ui.textarea(
+            ui.textarea(
                 placeholder='Reading, meaning, or answer…',
-                value=card['back']
-            ).props('outlined autogrow').classes('w-full mb-2')
-
-            # Live-bind inputs → card dict so the list preview stays current
-            def _on_front(e, c=card):
-                c['front'] = e.value
-                _build_list()   # refresh just the list for live previews
-
-            def _on_back(e, c=card):
-                c['back'] = e.value
-                _build_list()
-
-            front_in.on('update:model-value', _on_front)
-            back_in.on('update:model-value', _on_back)
+            ).props('outlined autogrow').classes('w-full mb-2') \
+             .bind_value(card, 'back') \
+             .on('update:model-value', lambda _: _build_list())
 
             # Mini preview of how the card looks
             ui.separator().classes('my-4')
@@ -210,7 +203,7 @@ def create_new_deck_page():
                 ui.label('Cards').classes('font-medium text-grey-7')
                 card_count = ui.label('').classes('text-xs text-grey-5')
 
-            card_list = ui.column().classes('w-full gaDp-1 min-h-[260px] max-h-[520px] overflow-y-auto')
+            card_list = ui.column().classes('w-full gap-1 min-h-[260px] max-h-[520px] overflow-y-auto')
 
             ui.separator().classes('my-2')
 
