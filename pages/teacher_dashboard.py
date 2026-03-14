@@ -23,6 +23,13 @@ def dashboard_page():
         ui.navigate.to('/')
         return
 
+    # Apply the user's chosen background gradient, if any.
+    # get_bg_css() returns '' for the default theme, so we only inject
+    # the style tag when there is actually something to apply.
+    bg_css = auth.get_bg_css()
+    if bg_css:
+        ui.add_head_html(f'<style>body {{ {bg_css} }}</style>')
+
     if auth.current_user.get('role') == 'admin':
         show_teacher_dashboard()
     else:

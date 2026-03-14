@@ -12,22 +12,10 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def get_default_decks():
-    """Generate 5 preset Japanese-learning decks for new users.
-
-    The decks follow a natural beginner progression:
-      1. Hiragana vowel row (あ行)   — the absolute starting point
-      2. Hiragana か行 & さ行        — next two gojuon rows
-      3. Kanji: Nature               — high-frequency nature kanji (JLPT N5)
-      4. Kanji: People & Daily Life  — common people/time/object kanji (JLPT N5)
-
-    SRS metadata (repetitions, interval, ef, due_date) is seeded with a
-    spread of values so the library page shows a realistic mix of due,
-    upcoming, and fresh cards right from first login.
-    """
+    """Generate 5 preset Japanese-learning decks for new users."""
     today = datetime.now()
 
     def card(front, back, reps=0, interval=0, ef=2.5, delta_days=0):
-        """Helper to build a card dict with a relative due_date offset."""
         return {
             "front": front,
             "back": back,
@@ -38,11 +26,6 @@ def get_default_decks():
         }
 
     return [
-        # ------------------------------------------------------------------ #
-        # Deck 1 – Hiragana あ行 (the 5 vowels)
-        # Every Japanese learner starts here. These 5 characters underpin
-        # every other hiragana and katakana sound.
-        # ------------------------------------------------------------------ #
         {
             "name": "Hiragana あ行",
             "description": "The 5 vowels — the very first row of hiragana every learner starts with",
@@ -54,9 +37,6 @@ def get_default_decks():
                 card("お", "o  —  as in 'b-o-ne'",               reps=0, interval=0, ef=2.5, delta_days=0),
             ]
         },
-        # ------------------------------------------------------------------ #
-        # Deck 2 – Hiragana か行 (K-row)
-        # ------------------------------------------------------------------ #
         {
             "name": "Hiragana か行",
             "description": "K-row — ka, ki, ku, ke, ko",
@@ -68,10 +48,6 @@ def get_default_decks():
                 card("こ", "ko  —  as in 'c-o-at'",  reps=0, interval=0, ef=2.5, delta_days=0),
             ]
         },
-        # ------------------------------------------------------------------ #
-        # Deck 3 – Hiragana さ行 (S-row)
-        # Note: 'si' does not exist in Japanese — it becomes 'shi'.
-        # ------------------------------------------------------------------ #
         {
             "name": "Hiragana さ行",
             "description": "S-row — sa, shi, su, se, so  (note: 'si' becomes 'shi' in Japanese)",
@@ -83,10 +59,6 @@ def get_default_decks():
                 card("そ", "so  —  as in 's-o-ap'",                   reps=0, interval=0, ef=2.5, delta_days=0),
             ]
         },
-        # ------------------------------------------------------------------ #
-        # Deck 4 – Kanji: Nature  (JLPT N5)
-        # All 10 appear in everyday vocabulary and the days of the week.
-        # ------------------------------------------------------------------ #
         {
             "name": "Kanji: Nature",
             "description": "Common nature kanji — all appear in everyday words and day names",
@@ -103,9 +75,6 @@ def get_default_decks():
                 card("花", "はな  (hana)  —  flower\nEx: 花火 (はなび) = fireworks",                   reps=0, interval=0, ef=2.5, delta_days=0),
             ]
         },
-        # ------------------------------------------------------------------ #
-        # Deck 5 – Kanji: People & Daily Life  (JLPT N5)
-        # ------------------------------------------------------------------ #
         {
             "name": "Kanji: People & Daily Life",
             "description": "High-frequency kanji for people, time, and everyday objects",
@@ -125,7 +94,6 @@ def get_default_decks():
     ]
 
 
-# Default users (used when no users.json exists)
 _default_users = {
     "alice": {
         "password_hash": pwd_context.hash("aliceSecret2025"),
@@ -141,7 +109,6 @@ _default_users = {
     }
 }
 
-# users will be loaded from USERS_FILE if present
 users = {}
 
 
@@ -149,9 +116,7 @@ def load_users():
     global users
     if USERS_FILE.exists():
         try:
-            # Load users from file
             users = json.loads(USERS_FILE.read_text(encoding='utf-8'))
-            # Add default decks to users that don't have any
             for username in users:
                 if 'decks' not in users[username]:
                     users[username]['decks'] = get_default_decks()
@@ -183,10 +148,8 @@ def add_user(username: str, full_name: str, password: str, role: str = 'user') -
     return True
 
 
-# Load users on import
 load_users()
 
-# Session / logged-in state
 current_user = None
 current_username = None
 
@@ -214,3 +177,44 @@ def logout():
     current_user = None
     current_username = None
     ui.navigate.to('/')
+
+
+# ---------------------------------------------------------------------------
+# Dashboard background image
+# ---------------------------------------------------------------------------
+# The image is stored as a base64 data URL directly in users.json.
+# get_bg_css() returns '' when no image is set so callers can skip
+# injecting a <style> tag entirely.
+# 5 MB raw → ~6.7 MB after base64; acceptable for a desktop single-user app.
+# ---------------------------------------------------------------------------
+
+MAX_IMAGE_BYTES = 5 * 1024 * 1024   # 5 MB
+
+
+def get_bg_css() -> str:
+    """Return CSS for the current user's dashboard background image, or ''."""
+    if not current_user:
+        return ''
+    data_url = current_user.get('bg_image', '')
+    if not data_url:
+        return ''
+    return (
+        f'background-image: url("{data_url}"); '
+        f'background-size: cover; '
+        f'background-position: center; '
+        f'background-attachment: fixed;'
+    )
+
+
+def set_bg_image(data_url: str) -> None:
+    """Persist a base64 data URL as the custom dashboard background."""
+    if current_user:
+        current_user['bg_image'] = data_url
+        save_users()
+
+
+def clear_bg_image() -> None:
+    """Remove the custom background image."""
+    if current_user:
+        current_user.pop('bg_image', None)
+        save_users()
