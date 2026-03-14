@@ -236,11 +236,10 @@ def flashcard_deck_page(deck_name: str):
         with ui.element('div').classes('flip-scene w-full'):
             with ui.element('div').classes('flip-card').props('id="the-flip-card"') \
                     .on('click', lambda: (
-                        setattr(state, '__class__', state.__class__),  # no-op trick
-                        ui.run_javascript('flipCard()'),
-                        state.update({'revealed': True}),
-                        rating_row.set_visibility(True),
-                        flip_hint.set_visibility(False),
+                        ui.run_javascript('flipCard()'),        # trigger the CSS flip animation
+                        state.update({'revealed': True}),       # mark card as revealed in state
+                        rating_row.set_visibility(True),        # show the rating buttons
+                        flip_hint.set_visibility(False),        # hide the "tap to reveal" hint
                     )):
                 # front face
                 front_face = ui.element('div').classes('flip-face flip-front')
