@@ -192,24 +192,57 @@ MAX_IMAGE_BYTES = 5 * 1024 * 1024   # 5 MB
 
 
 def get_bg_css() -> str:
-    """Return CSS for the current user's dashboard background image, or ''."""
+    """Return a full <style> block for the dashboard background, or ''.
+
+    The image is placed on body::before with filter:brightness() applied to
+    that pseudo-element alone.  This dims the background without affecting
+    the cards, text, or any other page content sitting on top of it.
+    """
     if not current_user:
         return ''
     data_url = current_user.get('bg_image', '')
     if not data_url:
         return ''
+    brightness = round(float(current_user.get('bg_brightness', 1.0)), 3)
     return (
-        f'background-image: url("{data_url}"); '
-        f'background-size: cover; '
-        f'background-position: center; '
-        f'background-attachment: fixed;'
+        'body { margin: 0; }\n'
+        'body::before {\n'
+        '  content: "";\n'
+        '  position: fixed;\n'
+        '  inset: 0;\n'
+        f' background-image: url("{data_url}");\n'
+        '  background-size: cover;\n'
+        '  background-position: center;\n'
+        '  background-attachment: fixed;\n'
+        f' filter: brightness({brightness});\n'
+        '  z-index: -1;\n'
+        '}\n'
     )
 
 
+def get_bg_brightness() -> float:
+    """Return the stored brightness value (0.0-1.0), defaulting to 1.0."""
+    if not current_user:
+        return 1.0
+    return float(current_user.get('bg_brightness', 1.0))
+
+
+def set_bg_brightness(value: float) -> None:
+    """Persist a brightness value clamped to [0.0, 1.0]."""
+    if current_user:
+        current_user['bg_brightness'] = round(max(0.0, min(1.0, value)), 3)
+        save_users()
+
+
 def set_bg_image(data_url: str) -> None:
-    """Persist a base64 data URL as the custom dashboard background."""
+    """Persist a base64 data URL as the custom dashboard background.
+
+    Brightness is always reset to 1.0 on upload so a fresh image starts
+    at full brightness regardless of any previously stored value.
+    """
     if current_user:
         current_user['bg_image'] = data_url
+        current_user['bg_brightness'] = 1.0
         save_users()
 
 

@@ -5,7 +5,6 @@ import base64
 
 EMOJI_OPTIONS = ['👤', '🎓', '📚', '🧠', '⭐', '🎯', '✨', '🚀', '💡', '🎨', '📝', '🏆']
 
-# Image types shown in the OS file picker filter
 IMAGE_FILE_TYPES = ('Image Files (*.png;*.jpg;*.jpeg;*.webp;*.gif)', 'All Files (*.*)')
 
 
@@ -89,45 +88,49 @@ def preference_settings():
             .props('flat round').classes('text-grey-6')
         ui.label('Preferences').classes('text-2xl font-semibold text-grey-8 dark:text-grey-2')
 
-    ui.separator().classes('mb-6')
+    ui.separator().classes('mb-4')
 
-    with ui.row().classes('w-full gap-6 items-start'):
+    # ── 3-column layout ──────────────────────────────────────────────────────
+    # LEFT   — Avatar + Account Details
+    # MIDDLE — Security + Session
+    # RIGHT  — Dashboard Background (alone, occupies the full column)
+    # -------------------------------------------------------------------------
+    with ui.element("div").classes("grid grid-cols-3 gap-4 w-full"):
 
-        # ── LEFT COLUMN ─────────────────────────────────────────────────────
-        with ui.column().classes('flex-1 gap-5'):
+        # ── LEFT: Avatar + Account Details ───────────────────────────────────
+        with ui.column().classes('gap-3'):
 
-            # Avatar
-            with ui.card().classes('w-full p-5'):
-                with ui.row().classes('items-center gap-2 mb-4'):
-                    ui.icon('account_circle').classes('text-grey-5')
-                    ui.label('Avatar').classes('font-semibold text-grey-7')
-                with ui.row().classes('items-center gap-4 mb-4'):
-                    with ui.avatar(size='xl', color='primary'):
-                        current_icon_label = ui.label(get_user_icon()).classes('text-3xl')
+            with ui.card().classes('w-full p-3'):
+                with ui.row().classes('items-center gap-2 mb-2'):
+                    ui.icon('account_circle').classes('text-grey-5 text-sm')
+                    ui.label('Avatar').classes('font-semibold text-grey-7 text-sm')
+                with ui.row().classes('items-center gap-3 mb-2'):
+                    with ui.avatar(size='lg', color='primary'):
+                        current_icon_label = ui.label(get_user_icon()).classes('text-2xl')
                     with ui.column().classes('gap-0'):
-                        ui.label(user.get('full_name', '')).classes('font-medium text-grey-8')
-                        ui.label(f'@{auth.current_username}').classes('text-sm text-grey-5')
-                ui.label('Choose icon').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-2')
-                with ui.row().classes('gap-2 flex-wrap'):
+                        ui.label(user.get('full_name', '')).classes('font-medium text-grey-8 text-sm')
+                        ui.label(f'@{auth.current_username}').classes('text-xs text-grey-5')
+                with ui.row().classes('gap-1 flex-wrap'):
                     for emoji in EMOJI_OPTIONS:
                         is_sel = emoji == get_user_icon()
                         ui.button(emoji) \
                             .props('unelevated' if is_sel else 'flat') \
-                            .classes('text-xl w-12 h-12 rounded-xl ' +
+                            .classes('text-lg w-10 h-10 rounded-lg ' +
                                      ('bg-primary text-white' if is_sel else 'hover:bg-grey-2')) \
                             .on('click', lambda e=emoji: (set_user_icon(e), current_icon_label.set_text(e)))
 
-            # Account details
-            with ui.card().classes('w-full p-5'):
-                with ui.row().classes('items-center gap-2 mb-4'):
-                    ui.icon('badge').classes('text-grey-5')
-                    ui.label('Account Details').classes('font-semibold text-grey-7')
-                ui.label('Full name').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
+            with ui.card().classes('w-full p-3'):
+                with ui.row().classes('items-center gap-2 mb-2'):
+                    ui.icon('badge').classes('text-grey-5 text-sm')
+                    ui.label('Account Details').classes('font-semibold text-grey-7 text-sm')
+                ui.label('Full name') \
+                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
                 name_input = ui.input(placeholder='Your display name', value=user.get('full_name', '')) \
-                    .props('outlined dense').classes('w-full mb-4')
-                ui.label('Username').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
+                    .props('outlined dense').classes('w-full mb-2')
+                ui.label('Username') \
+                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
                 username_input = ui.input(placeholder='your_username', value=auth.current_username) \
-                    .props('outlined dense').classes('w-full mb-4')
+                    .props('outlined dense').classes('w-full mb-2')
 
                 def save_account():
                     changed = False
@@ -144,47 +147,89 @@ def preference_settings():
                     if changed:
                         ui.navigate.to('/preference_settings')
 
-                ui.button('Save changes', icon='save').props('unelevated no-caps') \
+                ui.button('Save changes', icon='save').props('unelevated no-caps dense') \
                     .classes('bg-primary text-white rounded-lg w-full').on('click', save_account)
 
-            # ── Dashboard Background ─────────────────────────────────────────
-            # Uses the OS native file picker (via pywebview) to read the image
-            # directly from disk. This avoids the NiceGUI ui.upload component
-            # entirely, which has version-inconsistent event arguments in native
-            # mode. The raw bytes are base64-encoded and stored as a data URL in
-            # users.json, then injected as a CSS background on the dashboard.
-            # ----------------------------------------------------------------
-            with ui.card().classes('w-full p-5'):
-                with ui.row().classes('items-center gap-2 mb-1'):
-                    ui.icon('wallpaper').classes('text-grey-5')
-                    ui.label('Dashboard Background').classes('font-semibold text-grey-7')
-                ui.label('Set a custom image as your dashboard background.') \
-                    .classes('text-xs text-grey-5 mb-4')
+        # ── MIDDLE: Security + Session ────────────────────────────────────────
+        with ui.column().classes('gap-3'):
 
-                # Preview of the currently stored image.
-                # ui.image sets src= directly so data URLs never touch
-                # NiceGUI's CSS parser (which chokes on the colons/semicolons
-                # inside a data URL string).
+            with ui.card().classes('w-full p-3'):
+                with ui.row().classes('items-center gap-2 mb-2'):
+                    ui.icon('lock').classes('text-grey-5 text-sm')
+                    ui.label('Security').classes('font-semibold text-grey-7 text-sm')
+                ui.label('Current password') \
+                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
+                current_pwd = ui.input(
+                    placeholder='Enter current password',
+                    password=True, password_toggle_button=True
+                ).props('outlined dense').classes('w-full mb-2')
+                ui.label('New password') \
+                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
+                new_pwd = ui.input(
+                    placeholder='At least 6 characters',
+                    password=True, password_toggle_button=True
+                ).props('outlined dense').classes('w-full mb-2')
+                ui.label('Confirm new password') \
+                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
+                confirm_pwd = ui.input(
+                    placeholder='Repeat new password',
+                    password=True, password_toggle_button=True
+                ).props('outlined dense').classes('w-full mb-2')
+
+                def update_password():
+                    if change_password(current_pwd.value, new_pwd.value, confirm_pwd.value):
+                        current_pwd.set_value('')
+                        new_pwd.set_value('')
+                        confirm_pwd.set_value('')
+
+                ui.button('Update password', icon='lock_reset').props('unelevated no-caps dense') \
+                    .classes('bg-blue-600 text-white rounded-lg w-full') \
+                    .on('click', update_password)
+
+            with ui.card().classes('w-full p-3'):
+                with ui.row().classes('items-center gap-2 mb-2'):
+                    ui.icon('logout').classes('text-grey-5 text-sm')
+                    ui.label('Session').classes('font-semibold text-grey-7 text-sm')
+                ui.label(f'Signed in as {user.get("full_name", auth.current_username)}') \
+                    .classes('text-xs text-grey-6 mb-2')
+
+                def sign_out():
+                    ui.notify('Signing out…', type='info')
+                    auth.logout()
+
+                ui.button('Sign out', icon='logout').props('unelevated no-caps dense color=red') \
+                    .classes('bg-red-600 text-white rounded-lg w-full') \
+                    .on('click', sign_out)
+
+        # ── RIGHT: Dashboard Background (alone) ───────────────────────────────
+        with ui.column().classes('gap-3'):
+
+            with ui.card().classes('w-full p-3'):
+                with ui.row().classes('items-center gap-2 mb-2'):
+                    ui.icon('wallpaper').classes('text-grey-5 text-sm')
+                    ui.label('Dashboard Background').classes('font-semibold text-grey-7 text-sm')
+                ui.label('Set a custom image as your dashboard background.') \
+                    .classes('text-xs text-grey-5 mb-2')
+
                 stored_url = user.get('bg_image', '')
 
                 preview_img = ui.image(stored_url if stored_url else '') \
-                    .classes('w-full rounded-xl border-2 border-indigo-400') \
-                    .style('height: 120px; object-fit: cover;')
+                    .classes('w-full rounded-lg border-2 border-indigo-400') \
+                    .style('height: 80px; object-fit: cover;')
                 preview_img.set_visibility(bool(stored_url))
 
                 active_badge = ui.label('✓ Custom image active') \
-                    .classes('text-xs text-indigo-500 font-medium mt-1 mb-3')
+                    .classes('text-xs text-indigo-500 font-medium mt-1 mb-2')
                 active_badge.set_visibility(bool(stored_url))
 
                 async def _pick_image():
-                    """Open the OS file picker and load the chosen image."""
                     result = await app.native.main_window.create_file_dialog(
-                        dialog_type=10,   # webview.OPEN_DIALOG = 10
+                        dialog_type=10,
                         allow_multiple=False,
                         file_types=IMAGE_FILE_TYPES,
                     )
                     if not result:
-                        return   # user cancelled
+                        return
 
                     path = result[0]
                     try:
@@ -211,12 +256,11 @@ def preference_settings():
                     data_url = f'data:{mime};base64,{encoded}'
 
                     auth.set_bg_image(data_url)
-
-                    # set_source updates the <img src> attribute directly —
-                    # no CSS parser involved, so the data URL is safe here.
                     preview_img.set_source(data_url)
                     preview_img.set_visibility(True)
                     active_badge.set_visibility(True)
+                    brightness_row.set_visibility(True)
+                    brightness_pct.set_text('100%')
                     remove_btn.set_visibility(True)
 
                     size_str = (
@@ -234,69 +278,36 @@ def preference_settings():
                     auth.clear_bg_image()
                     preview_img.set_visibility(False)
                     active_badge.set_visibility(False)
+                    brightness_row.set_visibility(False)
                     remove_btn.set_visibility(False)
                     ui.notify('Background image removed.', type='info')
 
                 ui.button('Choose image…', icon='upload') \
-                    .props('unelevated no-caps') \
+                    .props('unelevated no-caps dense') \
                     .classes('bg-primary text-white rounded-lg w-full mb-2') \
                     .on('click', _pick_image)
 
+                with ui.column().classes('w-full gap-1 mt-1 mb-1') as brightness_row:
+                    with ui.row().classes('w-full items-center justify-between'):
+                        ui.label('Brightness') \
+                            .classes('text-xs font-medium text-grey-6 uppercase tracking-wide')
+                        brightness_pct = ui.label(
+                            f'{int(auth.get_bg_brightness() * 100)}%'
+                        ).classes('text-xs text-grey-5')
+                    ui.slider(
+                        min=0, max=100,
+                        value=int(auth.get_bg_brightness() * 100),
+                    ).props('dense').classes('w-full').on(
+                        'update:model-value',
+                        lambda e: (
+                            auth.set_bg_brightness(e.args / 100),
+                            brightness_pct.set_text(f'{int(e.args)}%'),
+                        ),
+                    )
+                brightness_row.set_visibility(bool(stored_url))
+
                 remove_btn = ui.button('Remove image', icon='delete_outline') \
-                    .props('flat no-caps') \
+                    .props('flat no-caps dense') \
                     .classes('text-red-500 w-full') \
                     .on('click', _remove_image)
                 remove_btn.set_visibility(bool(stored_url))
-
-        # ── RIGHT COLUMN ────────────────────────────────────────────────────
-        with ui.column().classes('flex-1 gap-5'):
-
-            # Security
-            with ui.card().classes('w-full p-5'):
-                with ui.row().classes('items-center gap-2 mb-4'):
-                    ui.icon('lock').classes('text-grey-5')
-                    ui.label('Security').classes('font-semibold text-grey-7')
-                ui.label('Current password') \
-                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
-                current_pwd = ui.input(
-                    placeholder='Enter current password',
-                    password=True, password_toggle_button=True
-                ).props('outlined dense').classes('w-full mb-3')
-                ui.label('New password') \
-                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
-                new_pwd = ui.input(
-                    placeholder='At least 6 characters',
-                    password=True, password_toggle_button=True
-                ).props('outlined dense').classes('w-full mb-3')
-                ui.label('Confirm new password') \
-                    .classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
-                confirm_pwd = ui.input(
-                    placeholder='Repeat new password',
-                    password=True, password_toggle_button=True
-                ).props('outlined dense').classes('w-full mb-4')
-
-                def update_password():
-                    if change_password(current_pwd.value, new_pwd.value, confirm_pwd.value):
-                        current_pwd.set_value('')
-                        new_pwd.set_value('')
-                        confirm_pwd.set_value('')
-
-                ui.button('Update password', icon='lock_reset').props('unelevated no-caps') \
-                    .classes('bg-blue-600 text-white rounded-lg w-full') \
-                    .on('click', update_password)
-
-            # Sign out
-            with ui.card().classes('w-full p-5'):
-                with ui.row().classes('items-center gap-2 mb-3'):
-                    ui.icon('logout').classes('text-grey-5')
-                    ui.label('Session').classes('font-semibold text-grey-7')
-                ui.label(f'Signed in as {user.get("full_name", auth.current_username)}') \
-                    .classes('text-sm text-grey-6 mb-4')
-
-                def sign_out():
-                    ui.notify('Signing out…', type='info')
-                    auth.logout()
-
-                ui.button('Sign out', icon='logout').props('unelevated no-caps color=red') \
-                    .classes('bg-red-600 text-white rounded-lg w-full') \
-                    .on('click', sign_out)
