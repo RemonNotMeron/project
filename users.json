@@ -1,6 +1,6 @@
 {
   "admin": {
-    "password_hash": "$2b$12$DHEHpM6mKUpMtgGAQAmJhucQt/v7YW0Un7GvJaxXigSP8Iuhufm/q",
+    "password_hash": "$2b$12$SqQe.CA90jcjkhcy3jkAQevgWqd4xVgc4Y10KFYoRLdtCdEDf1Y2K",
     "full_name": "Mr. Goto",
     "role": "admin",
     "decks": [
@@ -314,7 +314,8 @@
           }
         ]
       }
-    ]
+    ],
+    "icon": "\ud83c\udfaf"
   },
   "bob": {
     "password_hash": "$2b$12$SM8cyCfFS19725whHxMT4uz6ADgNHTokaZsTOO4NyFhhY6LOGDJFe",

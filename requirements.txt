@@ -1,0 +1,8 @@
+nicegui
+passlib[bcrypt]
+bcrypt==4.0.1
+plotly
+supermemo2
+pywebview
+
+#new version
