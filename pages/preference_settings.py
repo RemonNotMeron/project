@@ -97,72 +97,6 @@ def change_password(current_password: str, new_password: str, confirm_password: 
     return False
 
 
-def handle_background_upload(e):
-    """Handle dashboard background image upload"""
-    try:
-        # Extract file from UploadEventArguments
-        if not hasattr(e, 'file') or e.file is None:
-            ui.notify('No file received', type='negative')
-            return
-        
-        uploaded_file = e.file
-        
-        # Handle both SmallFileUpload (_data) and LargeFileUpload (_path)
-        if hasattr(uploaded_file, '_data'):
-            # Small file - data is in memory
-            file_content = uploaded_file._data
-        elif hasattr(uploaded_file, '_path'):
-            # Large file - data is in temporary file
-            with open(uploaded_file._path, 'rb') as f:
-                file_content = f.read()
-        else:
-            ui.notify('Unable to access uploaded file', type='negative')
-            return
-        
-        # Encode to base64
-        base64_content = base64.b64encode(file_content).decode('utf-8')
-        
-        # Get MIME type from content_type if available
-        mime_type = 'jpeg'
-        if hasattr(uploaded_file, 'content_type') and uploaded_file.content_type:
-            # Extract mime type from content_type (e.g., 'image/jpeg' -> 'jpeg')
-            mime_type = uploaded_file.content_type.split('/')[-1]
-        
-        data_uri = f"data:image/{mime_type};base64,{base64_content}"
-        
-        if auth.current_user:
-            auth.current_user['dashboard_bg'] = data_uri
-            auth.save_users()
-            ui.notify('Dashboard background updated!', type='positive')
-    except Exception as ex:
-        print(f"Exception: {ex}")
-        import traceback
-        traceback.print_exc()
-        ui.notify(f'Error: {str(ex)}', type='negative')
-
-
-def remove_dashboard_background():
-    """Remove dashboard background"""
-    if auth.current_user and 'dashboard_bg' in auth.current_user:
-        del auth.current_user['dashboard_bg']
-        auth.save_users()
-        ui.notify('Dashboard background removed', type='positive')
-        ui.navigate.to('/preference_settings')
-
-
-def get_background_brightness():
-    """Get background brightness setting (0.0 to 1.0)"""
-    if auth.current_user and 'bg_brightness' in auth.current_user:
-        return auth.current_user['bg_brightness']
-    return 0.4
-
-
-def set_background_brightness(value: float):
-    """Set background brightness setting"""
-    if auth.current_user:
-        auth.current_user['bg_brightness'] = value
-        auth.save_users()
-
 @ui.page('/preference_settings')
 def preference_settings():
     if not auth.is_authenticated():
@@ -231,28 +165,6 @@ def preference_settings():
                         ui.navigate.to('/preference_settings')
                 ui.button('Save changes', icon='save').props('unelevated no-caps') \
                     .classes('bg-primary text-white rounded-lg w-full').on('click', save_account)
-
-            # Card 3 — Background (tested working system)
-            with ui.card().classes('w-full p-4'):
-                ui.label('Background').classes('text-lg font-semibold mb-3')
-                
-                current_bg = user.get('dashboard_bg')
-                if current_bg:
-                    ui.image(current_bg).classes('w-full h-24 object-cover rounded mb-2')
-                    ui.button('Remove', icon='delete', on_click=remove_dashboard_background).props('flat color=warning').classes('w-full mb-2')
-                
-                ui.label('Upload Image').classes('text-xs font-medium text-gray-600')
-                ui.upload(on_upload=handle_background_upload, auto_upload=True).props('accept=image/*').classes('w-full')
-                ui.label('Brightness:').classes('text-xs font-medium text-gray-600 mt-2')
-                current_brightness = get_background_brightness()
-                brightness_slider = ui.slider(min=0, max=1, step=0.05, value=current_brightness).classes('w-full')
-                brightness_label = ui.label(f'{int(current_brightness * 100)}%').classes('text-xs text-gray-500')
-                
-                def on_brightness_change():
-                    set_background_brightness(brightness_slider.value)
-                    brightness_label.set_text(f'{int(brightness_slider.value * 100)}%')
-                
-                brightness_slider.on_value_change(lambda: on_brightness_change())
 
 
 

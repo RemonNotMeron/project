@@ -10,48 +10,6 @@ def get_user_icon():
     return '👤'
 
 
-def get_dashboard_background():
-    """Get dashboard background image if user has set one"""
-    if auth.current_user and 'dashboard_bg' in auth.current_user:
-        return auth.current_user['dashboard_bg']
-    return None
-
-
-def get_background_brightness():
-    """Get background brightness setting (0.0 to 1.0)"""
-    if auth.current_user and 'bg_brightness' in auth.current_user:
-        return auth.current_user['bg_brightness']
-    return 0.4
-
-
-def apply_background():
-    """Inject background image directly onto <body> via a <style> tag.
-    This is the only reliable approach in NiceGUI — targeting ui.column()
-    with fixed positioning does not work because NiceGUI wraps content in
-    its own container divs, preventing the column from reaching behind them.
-    """
-    bg_image = get_dashboard_background()
-    if bg_image:
-        brightness = get_background_brightness()
-        css = f"""
-        body {{
-            background-image: url('{bg_image}');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }}
-        body::before {{
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,{1 - brightness});
-            z-index: 0;
-            pointer-events: none;
-        }}
-        """
-        ui.add_head_html(f'<style>{css}</style>')
-
-
 @ui.page('/dashboard')
 def dashboard_page():
     if not auth.is_authenticated(): #validate login state
@@ -110,7 +68,6 @@ def _is_due_today(card: dict, today: date) -> bool:
 
 def show_admin_dashboard():
     """Show teacher dashboard for admins"""
-    apply_background()
     selected = {'username': None}
 
     # Header card — matches student style
@@ -273,7 +230,6 @@ def show_admin_dashboard():
 
 def show_user_dashboard():
     """Show normal user dashboard"""
-    apply_background()
     main_container = ui.column().classes('w-full max-w-5xl mx-auto p-6 gap-8')
     
     
