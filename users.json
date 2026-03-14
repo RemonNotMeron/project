@@ -969,6 +969,28 @@
             "due_date": "2026-03-14T13:31:29.480228"
           }
         ]
+      },
+      {
+        "name": "example deck",
+        "description": "",
+        "cards": [
+          {
+            "front": "hiragana",
+            "back": "katakana",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-14T13:58:56.731457"
+          },
+          {
+            "front": "second card",
+            "back": "example",
+            "repetitions": 0,
+            "interval": 0,
+            "ef": 2.5,
+            "due_date": "2026-03-14T13:58:56.731457"
+          }
+        ]
       }
     ]
   }

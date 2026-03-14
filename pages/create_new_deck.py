@@ -147,25 +147,30 @@ def create_new_deck_page():
                 ui.label(f'of {len(current_cards)}').classes('text-sm text-grey-5')
 
             # Front input
-            # bind_value(card, 'front') keeps the input and the dict entry
-            # in sync automatically — no event handler needed, so there is
-            # no risk of the GenericEventArguments/.value crash.
             ui.label('Front').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
             ui.input(
                 placeholder='Character, word, or question…',
+                value=card['front'],
             ).props('outlined').classes('w-full text-lg mb-4') \
-             .bind_value(card, 'front') \
-             .on('update:model-value', lambda _: _build_list())
+             .on('update:model-value', lambda e, c=card: (
+                 c.update({'front': e.args}),
+                 front_preview_label.set_text(e.args or '—'),
+                 _build_list(),
+             ))
 
             # Back textarea
             ui.label('Back').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-1')
             ui.textarea(
                 placeholder='Reading, meaning, or answer…',
+                value=card['back'],
             ).props('outlined autogrow').classes('w-full mb-2') \
-             .bind_value(card, 'back') \
-             .on('update:model-value', lambda _: _build_list())
+             .on('update:model-value', lambda e, c=card: (
+                 c.update({'back': e.args}),
+                 back_preview_label.set_text(e.args or '—'),
+                 _build_list(),
+             ))
 
-            # Mini preview of how the card looks
+            # Preview card — labels updated live via set_text
             ui.separator().classes('my-4')
             ui.label('Preview').classes('text-xs font-medium text-grey-6 uppercase tracking-wide mb-2')
             with ui.card().classes(
@@ -174,9 +179,11 @@ def create_new_deck_page():
                 'dark:from-grey-8 dark:to-grey-9 '
                 'border border-blue-100 dark:border-grey-7'
             ):
-                ui.label(card['front'] or '—').classes('text-4xl font-light text-grey-8 dark:text-grey-2 mb-3')
+                front_preview_label = ui.label(card['front'] or '—') \
+                    .classes('text-4xl font-light text-grey-8 dark:text-grey-2 mb-3')
                 ui.separator().classes('opacity-30')
-                ui.label(card['back'] or '—').classes('text-sm text-grey-6 mt-3 whitespace-pre-line')
+                back_preview_label = ui.label(card['back'] or '—') \
+                    .classes('text-4xl font-light text-grey-6 mt-3 whitespace-pre-line')
 
     # ── layout ─────────────────────────────────────────────────────────────
 
