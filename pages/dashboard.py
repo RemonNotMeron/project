@@ -35,7 +35,7 @@ def show_admin_dashboard():
 
 def show_user_dashboard():
 
-    with ui.card().classes('w-full bg-grey-2 dark:bg-grey-9'):
+    with ui.card().classes('w-full max-w-5xl mx-auto bg-grey-2 dark:bg-grey-9'):
                 with ui.row().classes('items-center w-full'):
                     # User avatar with custom icon
                     with ui.avatar(size='lg', color='primary'):
@@ -54,23 +54,21 @@ def show_user_dashboard():
                     ui.timer(1.0, lambda: clock.set_text(datetime.now().strftime('%H:%M')))
 
     with ui.card().classes('w-full max-w-5xl mx-auto p-6 gap-8'):
-                #placeholder for due cards, will be replaced with actual due cards in the future
-                with ui.column().classes('gap-4 w-full'):
-                    ui.label('cards due today will be displayed here').classes('text-lg text-grey-7 mt-0')
+        #placeholder for due cards, will be replaced with actual due cards in the future
+        with ui.column().classes('gap-2 w-full max-h-48 overflow-y-auto'):
+            ui.label('cards due today will be displayed here').classes('text-lg text-grey-7 mt-0')
 
+            # Check for due cards from all decks
+            has_due_cards = False
+            for deck in auth.current_user.get('decks', []):
+                due_cards = [c for c in deck.get('cards', []) if 'due_date' in c and datetime.fromisoformat(c['due_date']) <= datetime.now()]
+                if due_cards:
+                    has_due_cards = True
+                    ui.label(f'You have {len(due_cards)} cards due for review in "{deck["name"]}"').classes('text-lg text-grey-7 mt-0')
+            
+            if not has_due_cards:
+                ui.label('You are done for today! 🎉').classes('text-lg text-grey-7 mt-0 font-semibold')
 
-
-
-                    # Check for due cards from all decks
-                    """ has_due_cards = False
-                     for deck in auth.current_user.get('decks', []):
-                        due_cards = [c for c in deck.get('cards', []) if 'due_date' in c and datetime.fromisoformat(c['due_date']) <= datetime.now()]
-                        if due_cards:
-                            has_due_cards = True
-                            ui.label(f'You have {len(due_cards)} cards due for review in "{deck["name"]}"').classes('text-lg text-grey-7 mt-0')
-                    
-                    if not has_due_cards:
-                        ui.label('You are done for today! 🎉').classes('text-lg text-grey-7 mt-0 font-semibold')""" 
     # Navigation tiles
     with ui.card().props('rounded').classes('w-full max-w-5xl mx-auto p-6 gap-8'):
         ui.label('Navigate to different functions').classes('text-lg text-grey-7 mt-0')
