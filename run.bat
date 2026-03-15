@@ -10,15 +10,15 @@ if %errorlevel% neq 0 (
 )
 
 :: Create venv and install requirements only on first run
-if not exist "venv" (
+if not exist ".venv" (
     echo Creating virtual environment...
-    python -m venv venv
-    call venv\Scripts\activate
+    python -m venv .venv
+    call .venv\Scripts\activate
     echo Installing requirements...
     echo This might take ~2 minutes
     pip install -r requirements.txt --quiet
 ) else (
-    call venv\Scripts\activate
+    call .venv\Scripts\activate
 )
 
 :: Run the app
