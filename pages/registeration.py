@@ -49,6 +49,12 @@ def registration_page():
             if username in auth.users:
                 ui.notify('Username already exists.', type='negative')
                 return
+            if len(username) < 3 or len(pw) < 6:
+                ui.notify('Username must be at least 3 characters and password at least 6 characters.', type='negative')
+                return 
+            if len(username) > 20:
+                ui.notify('Username must be less than 20 characters.', type='negative')
+                return
 
             # Add the new user via helper (also saves to disk)
             if not auth.add_user(username, full_name, pw):

@@ -99,7 +99,7 @@ def preference_settings():
 
         # ── LEFT: Avatar + Account Details ───────────────────────────────────
         with ui.column().classes('gap-3'):
-
+            #Avatar card
             with ui.card().classes('w-full p-3'):
                 with ui.row().classes('items-center gap-2 mb-2'):
                     ui.icon('account_circle').classes('text-grey-5 text-sm')
@@ -118,7 +118,7 @@ def preference_settings():
                             .classes('text-lg w-10 h-10 rounded-lg ' +
                                      ('bg-primary text-white' if is_sel else 'hover:bg-grey-2')) \
                             .on('click', lambda e=emoji: (set_user_icon(e), current_icon_label.set_text(e)))
-
+            #Account details card
             with ui.card().classes('w-full p-3'):
                 with ui.row().classes('items-center gap-2 mb-2'):
                     ui.icon('badge').classes('text-grey-5 text-sm')
@@ -152,7 +152,7 @@ def preference_settings():
 
         # ── MIDDLE: Security + Session ────────────────────────────────────────
         with ui.column().classes('gap-3'):
-
+            #Security card
             with ui.card().classes('w-full p-3'):
                 with ui.row().classes('items-center gap-2 mb-2'):
                     ui.icon('lock').classes('text-grey-5 text-sm')
@@ -185,7 +185,7 @@ def preference_settings():
                 ui.button('Update password', icon='lock_reset').props('unelevated no-caps dense') \
                     .classes('bg-blue-600 text-white rounded-lg w-full') \
                     .on('click', update_password)
-
+            #Session card
             with ui.card().classes('w-full p-3'):
                 with ui.row().classes('items-center gap-2 mb-2'):
                     ui.icon('logout').classes('text-grey-5 text-sm')
